@@ -61,7 +61,7 @@ function printWeatherApi(resultsObj) {
   resultCard.classList.add('card', 'bg-light','text-dark')
   if(resultsObj.main){
     resultCard.innerHTML +=
-    '<strong>Date:</strong>' + resultsObj.dt_txt + '<br/>'
+    '<strong>Date:</strong>' + resultsObj.dt_txt + '<br/>' +
     '<strong>Temp:</strong>' + resultsObj.main.temp + '<br/>' + '<strong>Temp_Max:</strong>'+resultsObj.main.temp_max + '<br/v'
     '<strong>Temp_Low:</strong>'+ resultsObj.main.temp_low;
   } else{
@@ -69,6 +69,11 @@ function printWeatherApi(resultsObj) {
     '<strong>Main:</strong> No main for this entry. ';
   }
   resultWeatherEl.append(resultCard);
+  
 }
 
 document.getElementById("searchCity").addEventListener("click", getWeatherApi);
+
+function storeInput(){
+    localStorage.setItem('cityName', resultsObj.value);
+}
