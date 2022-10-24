@@ -2,6 +2,7 @@ var resultWeatherEl = document.querySelector("#result-weather");
 var resultTextEl = document.querySelector("#result-text");
 var weatherInputEl = document.getElementById("cityName");
 var APIKey = "82a943e11b0e9d19839aec89044e37c6";
+var cityList = [];
 
 function getWeatherApi(event) {
   event.preventDefault();
@@ -62,8 +63,8 @@ function printWeatherApi(resultsObj) {
   if(resultsObj.main){
     resultCard.innerHTML +=
     '<strong>Date:</strong>' + resultsObj.dt_txt + '<br/>' +
-    '<strong>Temp:</strong>' + resultsObj.main.temp + '<br/>' + '<strong>Temp_Max:</strong>'+resultsObj.main.temp_max + '<br/v'
-    '<strong>Temp_Low:</strong>'+ resultsObj.main.temp_low;
+    '<strong>Temp:</strong>' + resultsObj.main.temp + '<br/>' + '<strong>Temp_Max:</strong>'+resultsObj.main.temp_max + '<br/v>' +
+    '<strong>Temp_Low:</strong>'+ resultsObj.main.temp_min + '<br/>';
   } else{
     resultCard.innerHTML +=
     '<strong>Main:</strong> No main for this entry. ';
@@ -74,6 +75,6 @@ function printWeatherApi(resultsObj) {
 
 document.getElementById("searchCity").addEventListener("click", getWeatherApi);
 
-function storeInput(){
-    localStorage.setItem('cityName', resultsObj.value);
+function storeInput(city){
+    localStorage.setItem('cityName', resultsObj);
 }
