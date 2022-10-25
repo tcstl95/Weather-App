@@ -14,8 +14,8 @@
 input{
     background-color: beige;
 }
-h1{
-
+h1, h2, h3{
+font-family: sans-serif;
 }
 strong{
     background-color: beige;
