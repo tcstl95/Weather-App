@@ -123,7 +123,7 @@ function produceCities() {
     li.setAttribute("data-index", i);
 
     var button = document.createElement("button");
-    button.textContent = "  City Saved";
+    button.textContent = "City Saved";
 
     li.appendChild(button);
     savedCity.appendChild(li);

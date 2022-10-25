@@ -1,3 +1,19 @@
+*{
+    background-color: bisque;
+}
+
 .save{
     background-color: brown;
+}
+.card{
+   border-style: solid;
+   border-color: blue;
+   background-color: beige;
+   font-style: oblique;
+}
+input{
+    background-color: beige;
+}
+h1{
+
 }
