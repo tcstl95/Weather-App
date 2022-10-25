@@ -10,22 +10,28 @@
     </head>
 
     <body>
+        <!--Body for Weather App Search-->
         <div class="flex-row align-start align-stretch-md align-content-start align content-stretch-md min-100-vh bg-primary">
         <div class="col-12 col-md-3 bg-light p-3">
         <h1 class="text-primary">Weather App Search</h1>
         <form id="search-weather" class="mb-2">
             <div class="City"></div>
             <input name="cityName"id="cityName" class="cityName" type="text" placeholder="Search a city!">
+            <!--Search button user can use to find weather in a particular city-->
         <button class="searchCity" id="searchCity">Search City</button>
+        <!--Button to refresh page, so user can have a clear webpage while searching for another city-->
         <button class= "Refresh" a href="javascript:location.reload(true)">Refresh</a>
         </form>
         </div>
         </div>
         <div class="col-12 col-md-9 p-3 text-light">
+            <!--Section to display weather forecast for a search city-->
             <h2 class="weatherrepos">Your City's Five Day Forecast: <span id="result-text"></span></h2>
             <h3>Refresh Page to Clear Results.</h3>
             <div id="result-weather"></div>
+            <!--Button user can used to save search history for weather in a specific city-->
             <button id  ="save" class="save">Save City</button>
+            <!--Section of webpage where it stores cities the user searched-->
             <p> Saved City: <span id = "city-count">0</span></p>
             <ul id="saved-city"></ul>
         </div>
