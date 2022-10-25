@@ -1,8 +1,8 @@
 *{
-    background-color: bisque;
+    background-color: darkcyan;
 }
 
-.save{
+.save, .searchCity, .Refresh{
     background-color: brown;
 }
 .card{
@@ -16,4 +16,7 @@ input{
 }
 h1{
 
+}
+strong{
+    background-color: beige;
 }
